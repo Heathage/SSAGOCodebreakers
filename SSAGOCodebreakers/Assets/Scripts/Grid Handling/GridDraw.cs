@@ -4,8 +4,24 @@ using UnityEngine;
 
 public class GridDraw : MonoBehaviour
 {
+    public int x_Start, y_Start;
+
+    public int width, height;
+
+    public float x_Space, y_space;
+    public GameObject gridEntry;
+    public Transform parent;
+
     private void Start()
     {
-        Grid grid = new Grid(5, 5);
+        parent = this.gameObject.transform;
+
+        for (int i = 0; i < width * height; i++)
+        {
+            float gridX = x_Start + (x_Space * (i % width));
+            float gridY = y_Start + (-y_space * (i / width));
+
+            Instantiate(gridEntry, new Vector3(gridX, gridY), Quaternion.identity, parent);
+        }
     }
 }
