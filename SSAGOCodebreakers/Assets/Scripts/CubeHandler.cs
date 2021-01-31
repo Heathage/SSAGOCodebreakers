@@ -13,7 +13,14 @@ public class CubeHandler : MonoBehaviour
     private void Start()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
+        
     }
+
+    public void assignText()
+    {
+
+    }
+
 
     public void rotateCube()
     {
