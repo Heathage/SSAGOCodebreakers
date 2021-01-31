@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GridDraw : MonoBehaviour
 {
-    public int x_Start, y_Start;
+    public float x_Start, y_Start;
 
     public int width, height;
 
