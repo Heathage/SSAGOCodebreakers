@@ -16,9 +16,12 @@ public class CubeHandler : MonoBehaviour
 
     public Sprite teamOne, teamTwo, autoFail, extraWords;
 
+    Scoring scoring;
+
     private void Start()
     {
         text = GetComponentInChildren<TextMeshProUGUI>();
+        scoring = FindObjectOfType<Scoring>();
     }
 
     private void Update()
@@ -43,6 +46,14 @@ public class CubeHandler : MonoBehaviour
     public void rotateCube()
     {
         anim.SetInteger("Spin", 1);
+        RemoveTotal(buttonTeamID);
     }
+
+    public void RemoveTotal(int buttonTeamID)
+    {
+        scoring.RemoveFromTotal(buttonTeamID);
+    }
+
+
 
 }
