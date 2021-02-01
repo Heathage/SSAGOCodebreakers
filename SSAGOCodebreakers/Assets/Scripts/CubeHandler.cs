@@ -47,6 +47,7 @@ public class CubeHandler : MonoBehaviour
     {
         anim.SetInteger("Spin", 1);
         RemoveTotal(buttonTeamID);
+        Destroy(gameObject.GetComponentInChildren<Button>());
     }
 
     public void RemoveTotal(int buttonTeamID)
