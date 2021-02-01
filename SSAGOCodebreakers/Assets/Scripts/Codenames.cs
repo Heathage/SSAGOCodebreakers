@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Codenames : MonoBehaviour
 {
-    public GridDraw grid;
-
     public List<string> words = new List<string> {"Chickpeas", "Pasties", "Scouts", "Guides", "Penny", "Patsy", "Necker", "Blue", "Discord", "Taskmaster", "Laughing", "Group", "Rally",
         "Crouching", "Memes", "Chaos", "Murderers", "Evil", "Chaotic", "Megalomaniac", "Dedicated", "Bickering", "Argumentative", "Distracted", "Fun", "Nerds", "Reading", "Adverts", "Media",
         "Plants", "Brands", "Quirky", "Questionable", "Closed", "Green", "Modern", "Concrete", "Mining", "Greenery", "History", "Brutalist", "Small", "Hilly", "Construction", "Steps", "Stairs", "Dogs",
@@ -17,54 +15,18 @@ public class Codenames : MonoBehaviour
 
     public List<string> wordChoosing = new List<string>();
 
-    private string addWord;
-
     public int random;
-    private int cubeTeam = 0, teamOne = 1, teamTwo = 2, autoFail = 3, extraWords = 4;
 
-    public int NumberOfTeamOneWords = 9;
-    public int NumberOfTeamTwoWords = 9;
-    public int NumberOfAutoFailWords = 1;
-    public int NumberOfExtraWords = 6;
+    public int NumberOfWords = 25;
 
-    private void Start()
+    private void Awake()
     {
-        AssignTeamOne();
-        AssignTeamTwo();
-        AssignAutoFail();
-        AssignLast();
-    }
-    public void AssignTeamOne()
-    {
-        cubeTeam = 1;
-        for (int i = 0; i < NumberOfTeamOneWords; i++)
-        {
-            PickWord();
-        }
+        WordList();
     }
 
-    public void AssignTeamTwo()
+    public void WordList()
     {
-        cubeTeam = 2;
-        for (int i = 0; i < NumberOfTeamTwoWords; i++)
-        {
-            PickWord();
-        }
-    }
-
-    public void AssignAutoFail()
-    {
-        cubeTeam = 3;
-        for (int i = 0; i < NumberOfAutoFailWords; i++)
-        {
-            PickWord();
-        }
-    }
-
-    public void AssignLast()
-    {
-        cubeTeam = 4;
-        for (int i = 0; i < NumberOfExtraWords; i++)
+        for (int i = 0; i < NumberOfWords; i++)
         {
             PickWord();
         }

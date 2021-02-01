@@ -415,10 +415,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73d900631c7ce404689f54ebdbcffa68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonTeamID: 0
   anim: {fileID: 6611598722586817232}
   text: {fileID: 0}
-  gridElements: {fileID: 5905699222388114835, guid: a2841ee1b52612341add9fa3042ab0c4,
-    type: 3}
+  image: {fileID: 3351135917310641448}
+  teamOne: {fileID: 21300000, guid: 69f757583e44bda4897db19b88d99ac7, type: 3}
+  teamTwo: {fileID: 21300000, guid: 84152724a2a5f034da00ab78b147dcd2, type: 3}
+  autoFail: {fileID: 21300000, guid: 96e13d3676222b74ebed7a3f4578345b, type: 3}
+  extraWords: {fileID: 21300000, guid: 04cd97502dad0854a957a3f4c57f17cb, type: 3}
 --- !u!95 &6611598722586817232
 Animator:
   serializedVersion: 3
